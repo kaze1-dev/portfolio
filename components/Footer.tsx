@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#0E1117] text-zinc-500 py-8 px-4 border-t border-violet-950/30">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-sm text-center sm:text-left">
           <div className="font-bold text-white tracking-wide select-none">
             Faisal Abbas<span className="text-violet-500">.</span>

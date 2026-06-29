@@ -29,12 +29,10 @@ const Projects = () => {
   return (
     <section id="projects" className="bg-[#0E1117] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
       
-      {/* Dynamic Background Light Effect */}
-      <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-violet-600/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/4 left-0 w-100 h-100 bg-violet-600/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         
-        {/* Section Header */}
         <div className="mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
             Featured Projects<span className="text-violet-500">.</span>
@@ -43,8 +41,6 @@ const Projects = () => {
             A small collection of real-world deployments and architectural builds bridging frontend depth with intelligent automated backends.
           </p>
         </div>
-
-        {/* Projects Cards Container */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div 
@@ -52,7 +48,6 @@ const Projects = () => {
               className="bg-black/20 border border-violet-950/40 p-6 sm:p-7 rounded-2xl transition-all duration-300 hover:border-violet-500/30 hover:bg-black/40 group flex flex-col justify-between hover:-translate-y-1"
             >
               <div>
-                {/* Card Top Row: Folder and Action Links */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-violet-400 group-hover:text-violet-300 transition-colors duration-300">
                     <LuFolder size={28} strokeWidth={1.5} />
@@ -78,19 +73,13 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
-
-                {/* Project Title */}
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-
-                {/* Project Description */}
                 <p className="text-sm text-zinc-500 mb-6 leading-relaxed">
                   {project.description}
                 </p>
               </div>
-
-              {/* Technology Tags Stack */}
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag, tIdx) => (
                   <span 

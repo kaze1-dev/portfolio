@@ -24,7 +24,7 @@ const TechStack = () => {
       
       <div className="absolute bottom-0 right-0 w-75 h-75 bg-violet-500/5 rounded-full blur-[120px] pointer-events-none" />
       
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
             Tech Stack Blueprint<span className="text-violet-500">.</span>

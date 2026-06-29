@@ -5,7 +5,7 @@ import { LuMail, LuGithub, LuLinkedin } from 'react-icons/lu';
 const Header = () => {
   return (
     <header className="bg-[#0E1117] text-violet-300 sticky top-0 z-50  transition-colors duration-300">
-      <div className="max-w-5xl mx-auto h-16 px-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
 
         <div className="flex items-center space-x-8">
           <div className="text-lg font-bold tracking-wide text-violet-400 cursor-pointer select-none">
