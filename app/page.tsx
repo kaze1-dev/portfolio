@@ -1,13 +1,17 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import TechStack from "@/components/Skills";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <>
       <Hero />
       <About />
-    </main>
+      <TechStack />
+      <Projects />
+    </>
   );
 }
 //#0E1117 
