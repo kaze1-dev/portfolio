@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import ChatWidget from "@/components/chat_widget";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/Skills";
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <TechStack />
       <Projects />
+      <ChatWidget />
     </>
   );
 }
