@@ -29,14 +29,14 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-1">
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:kaze0001111@gmail.com"
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
             aria-label="Email"
           >
             <LuMail size={20} />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/kaze1-dev"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"

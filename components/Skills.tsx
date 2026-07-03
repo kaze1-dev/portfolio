@@ -5,17 +5,17 @@ const TechStack = () => {
     {
       category: "Frontend Architecture",
       description: "Building fast, responsive, and visually striking user interfaces with fluid interaction models.",
-      skills: ["Next.js", "React.js", "Tailwind CSS", "TypeScript"]
+      skills: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "Framer Motion", "GSAP", "shadcn/ui"]
     },
     {
       category: "Backend & Databases",
       description: "Designing robust server-side application logic, secure APIs, and optimized database schemas.",
-      skills: ["Python", "Node.js", "PostgreSQL", "Prisma ORM"]
+      skills: ["Python", "Node.js", "PostgreSQL", "Prisma ORM", "FastAPI", "Docker", "Docker Compose"]
     },
     {
       category: "AI & Automation",
       description: "Deploying intelligent autonomous workflows, containerized environments, and custom agent integrations.",
-      skills: ["n8n Automation", "Evolution API", "Docker","Docker Compose", "LLM Integration"]
+      skills: ["n8n Automation", "LangChain", "RAG (pgvector)", "Ollama", "LLM Integration", "Evolution API", "Docker", "Docker Compose"]
     }
   ];
 

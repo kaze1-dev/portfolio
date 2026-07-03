@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import { motion } from 'framer-motion';
 import { PixelCat } from './pixel_cat';
 
 
@@ -22,7 +21,10 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-center md:justify-end">
+        {/* <div className="flex items-center justify-center md:justify-end">
+          <PixelCat />
+        </div> */}
+        <div className='flex items-center justify-center md:justify-end'>
           <PixelCat />
         </div>
       </div>
