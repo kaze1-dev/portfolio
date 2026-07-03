@@ -16,7 +16,7 @@ const Hero = () => {
           I build high-performance web applications and design intelligent automation workflows that eliminate repetitive tasks. Turning complex logic into clean, scalable code is my superpower.
         </p>
         <a
-          href="mailto:faisal@example.com"
+          href="mailto:kaze000111@gmail.com"
           className="inline-flex items-center space-x-2 bg-violet-600 text-white px-6 py-3.5 rounded-xl font-semibold shadow-lg shadow-violet-600/20 transition-all duration-200 hover:bg-violet-500 hover:shadow-violet-500/30 hover:-translate-y-0.5 active:translate-y-0"
         >
           <span>Say Hi!</span>
