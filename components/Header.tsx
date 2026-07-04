@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
-import { LuMail, LuGithub, LuLinkedin } from 'react-icons/lu';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { HiMail } from 'react-icons/hi';
 
 const Header = () => {
   return (
@@ -33,7 +34,7 @@ const Header = () => {
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
             aria-label="Email"
           >
-            <LuMail size={20} />
+            <HiMail size={20} />
           </a>
           <a
             href="https://github.com/kaze1-dev"
@@ -42,7 +43,7 @@ const Header = () => {
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
             aria-label="GitHub"
           >
-            <LuGithub size={20} />
+            <BsGithub size={20} />
           </a>
           <a
             href="https://linkedin.com"
@@ -51,7 +52,7 @@ const Header = () => {
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
             aria-label="LinkedIn"
           >
-            <LuLinkedin size={20} />
+            <BsLinkedin size={20} />
           </a>
         </div>
 
