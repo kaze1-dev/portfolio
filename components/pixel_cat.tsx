@@ -1,17 +1,22 @@
 interface PixelCatProps {
   className?: string;
 }
+
 export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-82 sm:h-82' }) => {
   return (
     <div className={`relative flex items-center justify-center p-8 rounded-2xl ${className}`}>
       <style>{`
         @keyframes realTailWag {
           0%, 100% { transform: translateX(0); }
-          50% { transform: translateX(-2px); } /* Wags left and right */
+          50% { transform: translateX(-2px); }
         }
         @keyframes realEyeBlink {
           0%, 93%, 100% { transform: scaleY(1); }
-          96% { transform: scaleY(0); } /* True pixel blink */
+          96% { transform: scaleY(0); }
+        }
+        @keyframes bubbleFloat {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
         }
         .animate-real-tail {
           animation: realTailWag 1s steps(2) infinite;
@@ -20,6 +25,9 @@ export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-
           animation: realEyeBlink 4s steps(2) infinite;
           transform-box: fill-box;
           transform-origin: center;
+        }
+        .animate-bubble-float {
+          animation: bubbleFloat 3s ease-in-out infinite;
         }
       `}</style>
 
@@ -72,5 +80,3 @@ export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-
     </div>
   );
 };
-
-
