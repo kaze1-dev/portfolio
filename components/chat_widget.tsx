@@ -2,6 +2,7 @@
 import PixelCat from '@/components/cat_button';
 import React, { useState, useRef, useEffect } from 'react';
 import { LuSend } from 'react-icons/lu';
+import Typewriter from './Typewriter';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -9,40 +10,61 @@ interface Message {
 }
 
 export default function ChatWidget() {
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi there! I'm Meow-bot AI. Ask me anything about my creator's full-stack projects, n8n automation workflows, or computer science background! 🐾"
+      content: "Hi there! I'm Pixel. Ask me anything about my creator's full-stack projects, n8n automation workflows, or computer science background! 🐾"
     }
   ]);
-  
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
     }
   }, [messages, isOpen]);
-
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
-
-    const userMessage: Message = { role: 'user', content: input };
+    if (!input.trim() || isLoading) return;
+    const userQuery = input.trim();
+    const userMessage: Message = { role: 'user', content: userQuery };
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
-
-    setTimeout(() => {
+    setIsLoading(true);
+    try {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
+      const response = await fetch(`${API_URL}/api/chat`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userQuery }),
+      });
+      if (!response.ok) {
+        throw new Error(`Server returned status code: ${response.status}`);
+      }
+      const data = await response.json();
       setMessages((prev) => [
         ...prev,
         {
           role: 'assistant',
-          content: "Meow! I'm currently gathering context using LangChain and RAG pipelines. My creator is wiring up my brains right now!"
-        }
+          content: data.response,
+        },
       ]);
-    }, 800);
+    } catch (error) {
+      console.error("RAG pipeline communication failure:", error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: 'assistant',
+          content: "*flicks tail anxiously* I lost connection to my data core. Let's try that again in a second!",
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -64,8 +86,7 @@ export default function ChatWidget() {
           /* Mobile Positioning (Stays floating, never fills entire screen) */
           bottom-20 right-4 left-4 h-[65vh] max-h-120
           /* Desktop Scale-up Overrides */
-          sm:left-auto sm:bottom-24 sm:right-6 sm:w-90 sm:h-120 ${
-            isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-95 opacity-0 pointer-events-none'
+          sm:left-auto sm:bottom-24 sm:right-6 sm:w-90 sm:h-120 ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-95 opacity-0 pointer-events-none'
           }`}
       >
         <div className="flex items-center justify-between px-3.5 py-2.5 bg-neutral-900/60 backdrop-blur-md border-b border-neutral-900 shrink-0">
@@ -75,7 +96,7 @@ export default function ChatWidget() {
               <PixelCat className="w-5 h-5 p-0 relative" />
             </div>
             <div className="flex flex-col min-w-0">
-              <span className="text-xs font-semibold text-neutral-200 tracking-wide truncate">Meow-bot AI</span>
+              <span className="text-xs font-semibold text-neutral-200 tracking-wide truncate">Pixel</span>
               <span className="flex items-center gap-1 mt-0.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 <span className="text-[9px] text-neutral-400 font-medium truncate">RAG Interface Active</span>
@@ -89,7 +110,7 @@ export default function ChatWidget() {
             ✕
           </button>
         </div>
-        <div 
+        <div
           ref={scrollContainerRef}
           className="flex-1 overflow-y-auto p-4 space-y-5 text-xs scrollbar-thin [scrollbar-color:#262626_transparent]"
         >
@@ -102,10 +123,14 @@ export default function ChatWidget() {
                   </div>
                   <div className="flex-1 space-y-1 pt-0.5 min-w-0">
                     <div className="text-[9px] font-bold text-neutral-500 tracking-wider uppercase">
-                      Meow-Bot
+                      Pixel
                     </div>
                     <div className="text-neutral-200 leading-relaxed text-[13px] font-normal wrap-break-words selection:bg-[#9d7bf6]/30">
-                      {msg.content}
+                      {idx === messages.length - 1 ? (
+                        <Typewriter text={msg.content} speed={25} />
+                      ) : (
+                        msg.content
+                      )}
                     </div>
                   </div>
                 </div>
@@ -118,10 +143,26 @@ export default function ChatWidget() {
               )}
             </div>
           ))}
+          {isLoading && (
+            <div className="flex gap-2.5 max-w-full items-start animate-pulse">
+              <div className="shrink-0 w-6 h-6 rounded-md bg-neutral-900 border border-neutral-800 flex items-center justify-center mt-0.5 shadow-inner">
+                <PixelCat className="w-3.5 h-3.5 p-0" />
+              </div>
+              <div className="flex-1 space-y-1 pt-0.5">
+                <div className="text-[9px] font-bold text-neutral-500 tracking-wider uppercase">
+                  Pixel
+                </div>
+                <div className="text-neutral-400 text-[13px] font-normal italic">
+                  Hunting down data chunks...
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         <div className="p-3 border-t border-neutral-900 bg-neutral-950 shrink-0">
           <form onSubmit={handleSubmit} className="flex gap-1.5">
             <input
+              disabled={isLoading}
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -129,6 +170,7 @@ export default function ChatWidget() {
               className="flex-1 bg-neutral-900/50 border border-neutral-800/80 focus:border-[#9d7bf6]/60 focus:ring-1 focus:ring-[#9d7bf6]/30 focus:outline-none rounded-xl px-3 py-2 text-xs text-neutral-200 placeholder-neutral-500 transition-all"
             />
             <button
+              disabled={isLoading}
               type="submit"
               aria-label="Send message"
               className="bg-[#9d7bf6] hover:bg-[#8b65e3] hover:shadow-[0_0_12px_-2px_rgba(157,123,246,0.6)] text-neutral-950 font-semibold px-3 rounded-xl transition-all active:scale-95 flex items-center justify-center shrink-0"
