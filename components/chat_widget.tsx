@@ -59,7 +59,7 @@ export default function ChatWidget() {
         ...prev,
         {
           role: 'assistant',
-          content: "*flicks tail anxiously* I lost connection to my data core. Let's try that again in a second!",
+          content: "(Pixel is taking a nap... send another message to wake it up!)",
         },
       ]);
     } finally {
@@ -153,7 +153,7 @@ export default function ChatWidget() {
                   Pixel
                 </div>
                 <div className="text-neutral-400 text-[13px] font-normal italic">
-                  Hunting down data chunks...
+                  Thinking...
                 </div>
               </div>
             </div>
