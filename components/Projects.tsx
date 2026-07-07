@@ -8,7 +8,7 @@ type Project = {
   tags: string[]
   githubLink: string | null
   liveLink: string | null
-  videoUrl?: string | null 
+  videoUrl?: string | null
   inProgress?: boolean
   client?: boolean
 }
@@ -42,8 +42,15 @@ const Projects = () => {
       tags: ["n8n", "Evolution API", "Docker", "Docker Compose"],
       githubLink: null,
       liveLink: null,
-      videoUrl: "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4", 
+      videoUrl: "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4",
       client: true
+    },
+    {
+      title: "Pixel Cat Agent",
+      description: "A chatty AI-powered mascot widget embedded on this portfolio, backed by a retrieval-augmented generation pipeline.",
+      tags: ["Python", "FastAPI", "LangChain", "RAG"],
+      githubLink: "https://github.com/kaze1-dev/pixel",
+      liveLink: null
     },
     {
       title: "GoRoom — Multi-Hotel Booking Platform",
@@ -58,18 +65,11 @@ const Projects = () => {
 
   const miniProjects: Project[] = [
     {
-      title: "Pixel Cat Agent",
-      description: "A chatty AI-powered mascot widget embedded on this portfolio, backed by a retrieval-augmented generation pipeline.",
-      tags: ["Python", "FastAPI", "LangChain", "RAG"],
-      githubLink: null,
-      liveLink: null
-    },
-    {
       title: "Hotel Haven Lahore",
       description: "A client-facing frontend site built for a Lahore-based hotel.",
       tags: ["Next.js", "Tailwind CSS"],
       githubLink: null,
-      liveLink: "https://haven-hotel-lahore.vercel.app/", 
+      liveLink: "https://haven-hotel-lahore.vercel.app/",
       client: true
     },
     {
@@ -77,7 +77,7 @@ const Projects = () => {
       description: "A client-facing frontend site built for a Lahore-based guest house.",
       tags: ["Next.js", "Tailwind CSS"],
       githubLink: null,
-      liveLink: "https://guest-house-roan.vercel.app/", 
+      liveLink: "https://guest-house-roan.vercel.app/",
       client: true
     }
   ];
@@ -91,7 +91,7 @@ const Projects = () => {
           <div className="text-violet-400 group-hover:text-violet-300 transition-colors duration-300">
             <LuFolder size={compact ? 24 : 28} strokeWidth={1.5} />
           </div>
-          
+
           <div className="flex items-center space-x-3 text-zinc-500">
             {project.inProgress && (
               <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 select-none mr-1">
@@ -183,20 +183,20 @@ const Projects = () => {
         </div>
       </div>
       {activeVideo && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300 animate-fade-in"
-          onClick={() => setActiveVideo(null)} 
+          onClick={() => setActiveVideo(null)}
         >
-          <div 
+          <div
             className="relative w-full max-w-4xl bg-[#0E1117] border border-violet-900/40 rounded-2xl overflow-hidden shadow-2xl shadow-violet-950/50"
-            onClick={(e) => e.stopPropagation()}  
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between px-4 py-3 bg-black/40 border-b border-violet-950/40">
               <span className="text-xs font-mono font-medium text-violet-400 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 System Demo Playback
               </span>
-              <button 
+              <button
                 onClick={() => setActiveVideo(null)}
                 className="text-zinc-400 hover:text-white transition-colors p-1 rounded-lg hover:bg-white/5"
                 aria-label="Close modal"
@@ -205,10 +205,10 @@ const Projects = () => {
               </button>
             </div>
             <div className="aspect-video bg-black flex items-center justify-center">
-              <video 
-                src={activeVideo} 
-                controls 
-                autoPlay 
+              <video
+                src={activeVideo}
+                controls
+                autoPlay
                 className="w-full h-full object-contain"
               />
             </div>
