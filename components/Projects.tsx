@@ -55,7 +55,7 @@ const Projects = () => {
     {
       title: "GoRoom — Multi-Hotel Booking Platform",
       description: "A production-grade booking platform built for a client managing 8 hotels on a single unified system, featuring fluid filtering, secure authentication, and high-conversion reservations.",
-      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "better-auth", "Tailwind CSS"],
+      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "better-auth", "Tailwind CSS", "TanStack Query"],
       githubLink: null,
       liveLink: "https://goroom-system.vercel.app/",
       inProgress: true,
