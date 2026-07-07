@@ -46,7 +46,7 @@ const Header = () => {
             <BsGithub size={20} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/faisal-abbas-codes"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
