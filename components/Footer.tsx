@@ -1,5 +1,7 @@
 "use client"
 import React, { useState } from 'react'
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { HiMail } from 'react-icons/hi';
 import { LuArrowUp, LuGithub, LuLinkedin, LuMail, LuSend } from 'react-icons/lu'
 import { z } from 'zod'
 
@@ -160,7 +162,7 @@ const Footer = () => {
               aria-label="GitHub"
               className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
             >
-              <LuGithub size={16} />
+              <BsGithub size={16} />
             </a>
             <a
               href="https://linkedin.com/in/your-handle"
@@ -169,14 +171,14 @@ const Footer = () => {
               aria-label="LinkedIn"
               className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
             >
-              <LuLinkedin size={16} />
+              <BsLinkedin size={16} />
             </a>
             <a
               href="mailto:your-email@example.com"
               aria-label="Email"
               className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
             >
-              <LuMail size={16} />
+              <HiMail size={16} />
             </a>
           </div>
         </div>

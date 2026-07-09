@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
+import { BsGithub } from 'react-icons/bs';
 import { LuGithub, LuExternalLink, LuFolder, LuPlay, LuX } from 'react-icons/lu'
 
 type Project = {
@@ -115,7 +116,7 @@ const Projects = () => {
                 className="hover:text-violet-400 transition-colors duration-200"
                 aria-label="GitHub Repository"
               >
-                <LuGithub size={compact ? 18 : 20} />
+                <BsGithub size={compact ? 18 : 20} />
               </a>
             )}
             {project.liveLink && (
