@@ -40,7 +40,7 @@ const Projects = () => {
       title: "Autonomous WhatsApp AI Agent",
       description: "A client-deployed intelligent headless agent leveraging containerized microservices and automated n8n pipelines to interpret, process, and reply to user inquiries natively.",
       tags: ["n8n", "Evolution API", "Docker", "Docker Compose"],
-      githubLink: null,
+      githubLink: "https://github.com/kaze1-dev/tricasol",
       liveLink: null,
       videoUrl: "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4",
       client: true
