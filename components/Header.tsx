@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import React from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { HiMail } from 'react-icons/hi';
 
 const Header = () => {
   return (
-    <header className="bg-[#0E1117] text-violet-300 sticky top-0 z-50  transition-colors duration-300">
+    <header className="bg-[#0E1117] text-violet-300 sticky top-0 z-50 transition-colors duration-300">
       <div className="max-w-6xl mx-auto h-16 px-4 flex items-center justify-between">
 
         <div className="flex items-center space-x-8">
@@ -28,6 +28,7 @@ const Header = () => {
             </Link>
           </nav>
         </div>
+
         <div className="flex items-center space-x-1">
           <a
             href="mailto:kaze0001111@gmail.com"
@@ -53,6 +54,15 @@ const Header = () => {
             aria-label="LinkedIn"
           >
             <BsLinkedin size={20} />
+          </a>
+          <a
+            href="https://wa.me/923316855008"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg transition-all duration-200 hover:bg-violet-950/40 hover:text-violet-100"
+            aria-label="WhatsApp"
+          >
+            <BsWhatsapp size={20} />
           </a>
         </div>
 

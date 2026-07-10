@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { HiMail } from 'react-icons/hi';
 import { LuArrowUp, LuGithub, LuLinkedin, LuMail, LuSend } from 'react-icons/lu'
 import { z } from 'zod'
@@ -32,7 +32,7 @@ const Footer = () => {
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(formData);
-    
+
     if (!result.success) {
       const formattedErrors: typeof errors = {};
       result.error.issues.forEach((issue) => {
@@ -42,15 +42,15 @@ const Footer = () => {
       setErrors(formattedErrors);
       return;
     }
-    
+
     setErrors({});
     setStatus('submitting');
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData), 
+        body: JSON.stringify(formData),
       });
       if (response.ok) {
         setStatus('success');
@@ -85,11 +85,10 @@ const Footer = () => {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm ${
-                    errors.name 
-                      ? 'border-rose-500/50 focus:border-rose-500' 
-                      : 'border-violet-950/40 focus:border-violet-500/50'
-                  }`}
+                  className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm ${errors.name
+                    ? 'border-rose-500/50 focus:border-rose-500'
+                    : 'border-violet-950/40 focus:border-violet-500/50'
+                    }`}
                 />
                 {errors.name && <span className="text-xs text-rose-500 px-1">{errors.name}</span>}
               </div>
@@ -100,11 +99,10 @@ const Footer = () => {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm ${
-                    errors.email 
-                      ? 'border-rose-500/50 focus:border-rose-500' 
-                      : 'border-violet-950/40 focus:border-violet-500/50'
-                  }`}
+                  className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm ${errors.email
+                    ? 'border-rose-500/50 focus:border-rose-500'
+                    : 'border-violet-950/40 focus:border-violet-500/50'
+                    }`}
                 />
                 {errors.email && <span className="text-xs text-rose-500 px-1">{errors.email}</span>}
               </div>
@@ -116,11 +114,10 @@ const Footer = () => {
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
-                className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm resize-none ${
-                  errors.message 
-                    ? 'border-rose-500/50 focus:border-rose-500' 
-                    : 'border-violet-950/40 focus:border-violet-500/50'
-                }`}
+                className={`w-full px-4 py-2.5 rounded-lg border bg-[#13111F]/30 text-zinc-200 placeholder-zinc-600 focus:bg-[#13111F]/60 focus:outline-none transition-all duration-200 text-sm resize-none ${errors.message
+                  ? 'border-rose-500/50 focus:border-rose-500'
+                  : 'border-violet-950/40 focus:border-violet-500/50'
+                  }`}
               />
               {errors.message && <span className="text-xs text-rose-500 px-1">{errors.message}</span>}
             </div>
@@ -165,7 +162,7 @@ const Footer = () => {
               <BsGithub size={16} />
             </a>
             <a
-              href="https://linkedin.com/in/your-handle"
+              href="https://www.linkedin.com/in/faisal-abbas-codes"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -174,11 +171,20 @@ const Footer = () => {
               <BsLinkedin size={16} />
             </a>
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:kaze0001111@gmail.com"
               aria-label="Email"
+              target="_blank"
               className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
             >
               <HiMail size={16} />
+            </a>
+            <a
+              href="https://wa.me/923316855008"
+              target="_blank"
+              aria-label="Whatsapp"
+              className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
+            >
+              <BsWhatsapp size={16} />
             </a>
           </div>
         </div>
