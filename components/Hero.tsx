@@ -10,7 +10,7 @@ const Hero = () => {
           Hi!, I am <span className="text-transparent bg-clip-text bg-linear-to-r from-violet-400 to-fuchsia-500">Faisal</span>
         </h1>
         <h2 className="text-xl sm:text-2xl font-medium text-violet-300/90 mb-4 tracking-wide">
-          AI Engineer & Full-Stack Developer 
+          AI Full-Stack Engineer
         </h2>
         <p className="text-base text-zinc-400 max-w-xl mb-8 leading-relaxed">
           I build high-performance web applications and design intelligent automation workflows that eliminate repetitive tasks. Turning complex logic into clean, scalable code is my superpower.
