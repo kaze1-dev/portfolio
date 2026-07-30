@@ -4,7 +4,7 @@ import { PixelCat } from './pixel_cat';
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#0E1117] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20">
+    <section id="about" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center">
         
         <div className="flex flex-col justify-center">

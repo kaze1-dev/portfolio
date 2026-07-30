@@ -85,7 +85,7 @@ const Projects = () => {
 
   const ProjectCard = ({ project, compact }: { project: Project; compact: boolean }) => (
     <div
-      className={`bg-black/20 border border-violet-950/40 ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'} rounded-2xl transition-all duration-300 hover:border-violet-500/30 hover:bg-black/40 group flex flex-col justify-between hover:-translate-y-1 relative`}
+      className={`bg-black/20  ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'} rounded-2xl transition-all duration-300 hover:border-violet-500/30 hover:bg-black/40 group flex flex-col justify-between hover:-translate-y-1 relative`}
     >
       <div>
         <div className="flex items-center justify-between mb-6">
@@ -152,7 +152,7 @@ const Projects = () => {
     </div>
   );
   return (
-    <section id="projects" className="bg-[#0E1117] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
+    <section id="projects" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
       <div className="absolute top-1/4 left-0 w-100 h-100 bg-violet-600/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">

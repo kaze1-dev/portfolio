@@ -20,14 +20,14 @@ const TechStack = () => {
   ];
 
   return (
-    <section id="tech" className="bg-[#0E1117] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
+    <section id="tech" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
       
       <div className="absolute bottom-0 right-0 w-75 h-75 bg-violet-500/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="max-w-6xl mx-auto">
         <div className="mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-            Tech Stack Blueprint<span className="text-violet-500">.</span>
+            Tech Stack<span className="text-violet-500">.</span>
           </h2>
           <p className="text-base text-zinc-500 max-w-xl leading-relaxed">
             A curated selection of languages, frameworks, and automated engines I use to engineer high-performance systems.
@@ -37,9 +37,9 @@ const TechStack = () => {
           {stacks.map((stack, idx) => (
             <div 
               key={idx}
-              className="bg-black/20 border border-violet-950/40 p-6 sm:p-8 rounded-2xl transition-all duration-300 hover:border-violet-500/30 hover:bg-black/40 group relative flex flex-col justify-between"
+              className="bg-black/20 p-6 sm:p-8 rounded-2xl transition-all group relative flex flex-col justify-between hover:bg-black/40"
             >
-              <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-violet-500/0 to-transparent group-hover:via-violet-500/40 transition-all duration-500 rounded-t-2xl" />
+              <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent transition-all duration-500 rounded-t-2xl" />
 
               <div>
                 <h3 className="text-lg font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
