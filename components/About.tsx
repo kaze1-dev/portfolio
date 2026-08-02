@@ -4,7 +4,7 @@ import { PixelCat } from './pixel_cat';
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20">
+    <section id="about" className="bg-[#090D16] text-zinc-400 py-20 sm:py-18 px-4 border-t border-violet-950/20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center">
         
         <div className="flex flex-col justify-center">
@@ -14,10 +14,10 @@ const About = () => {
 
           <div className="space-y-5 text-base leading-relaxed">
             <p>
-              I am a <span className="text-violet-400 font-medium">Full-Stack AI Engineer</span>, currently pursuing my BS in Computer Science. Right now, I'm engineering intelligent systems at <span className="text-white font-medium">Tricasol</span>, where I bridge the gap between fluid user experiences and complex backend architecture. My technical toolkit centers around shipping high-performance web applications, designing scalable APIs, and seamlessly integrating advanced language models into native user workflows.
+              I am a <span className="text-violet-400 font-medium">Full-Stack AI Engineer</span> pursuing my BS in Computer Science and working at <span className="text-white font-medium">Tricasol</span>. I build modern web applications, design clean backend APIs, and integrate practical AI agents into real-world software.
             </p>
             <p>
-              My focus is heavily anchored in the intersection of robust code and cognitive systems—crafting everything from responsive frontends to vector-driven intelligent backends. Outside of development, I have a deep appreciation for analytical storytelling, whether it's found in literary fiction or classic existential sci-fi anime. I believe building great software is <span className="text-white font-medium">exactly like crafting a good narrative</span>—it requires absolute precision, pacing, and clean structure.
+              Whether I'm crafting responsive user interfaces with Next.js or building RAG pipelines with Python and FastAPI, my focus is on writing clean, efficient, and reliable code. Outside of software development, I enjoy reading fiction, watching classic sci-fi anime, and building side projects.
             </p>
           </div>
         </div>

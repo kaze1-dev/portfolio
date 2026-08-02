@@ -178,14 +178,14 @@ const Footer = () => {
             >
               <HiMail size={16} />
             </a>
-            <a
+            {/* <a
               href="https://wa.me/923316855008"
               target="_blank"
               aria-label="Whatsapp"
               className="p-2 rounded-lg border border-violet-950/40 bg-[#13111F]/30 text-zinc-500 hover:text-violet-300 hover:border-violet-500/20 hover:bg-[#13111F]/60 transition-all duration-200"
             >
               <BsWhatsapp size={16} />
-            </a>
+            </a> */}
           </div>
         </div>
 

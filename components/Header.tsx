@@ -14,16 +14,16 @@ const Header = () => {
           </div>
 
           <nav className="hidden md:flex items-center space-x-4">
-            <Link href="#home" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
+            <Link href="/#home" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
               Home
             </Link>
-            <Link href="#projects" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
+            <Link href="/#projects" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
               Projects
             </Link>
-            <Link href="#about" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
+            <Link href="/#about" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
               About
             </Link>
-            <Link href="#contact" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
+            <Link href="/#contact" className="rounded-lg text-sm font-black transition-all duration-200 text-slate-300 hover:text-violet-500">
               Contact
             </Link>
           </nav>
@@ -55,7 +55,7 @@ const Header = () => {
           >
             <BsLinkedin size={20} />
           </a>
-          <a
+          {/* <a
             href="https://wa.me/923316855008"
             target="_blank"
             rel="noopener noreferrer"
@@ -63,7 +63,7 @@ const Header = () => {
             aria-label="WhatsApp"
           >
             <BsWhatsapp size={20} />
-          </a>
+          </a> */}
         </div>
 
       </div>
