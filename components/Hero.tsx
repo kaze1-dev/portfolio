@@ -8,8 +8,10 @@ const Hero = () => {
         <h1 className="text-5xl sm:text-7xl md:text-7xl font-extrabold text-white mb-6 select-none font-sans">
           hi, <span className="text-violet-500">Faisal</span> here.
         </h1>
+
         <p className="text-base text-zinc-400 max-w-xl mb-10 leading-relaxed tracking-wide">
-          Full-Stack AI Engineer building modern web applications and automated AI tools. I focus on writing clean, reliable, and scalable software.
+          Full-Stack AI Engineer building web applications, backend systems, and
+          AI-powered tools with Next.js, Python, FastAPI, and LLMs.
         </p>
         <a
           href="mailto:kaze000111@gmail.com"

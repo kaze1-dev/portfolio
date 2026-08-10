@@ -14,7 +14,7 @@ const About = () => {
 
           <div className="space-y-5 text-base leading-relaxed">
             <p>
-              I’m a{" "}
+              I'm a{" "}
               <span className="text-violet-400 font-medium">
                 Full-Stack AI Engineer
               </span>{" "}
