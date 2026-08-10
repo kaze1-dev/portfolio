@@ -16,7 +16,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi there! I'm Pixel. Ask me anything about my creator's full-stack projects, n8n automation workflows, or computer science background! 🐾"
+      content: "Hi there! I'm Pixel. Ask me anything about my creator's projects or computer science background! 🐾"
     }
   ]);
   const scrollContainerRef = useRef<HTMLDivElement>(null);

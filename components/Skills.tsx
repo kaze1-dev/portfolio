@@ -1,23 +1,49 @@
 import React from 'react'
 
 const TechStack = () => {
-  const stacks = [
-    {
-      category: "Frontend Architecture",
-      description: "",
-      skills: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "Framer Motion", "GSAP", "shadcn/ui"]
-    },
-    {
-      category: "Backend & Databases",
-      description: "",
-      skills: ["Python", "Node.js", "PostgreSQL", "Prisma ORM", "FastAPI", "Docker", "Docker Compose"]
-    },
-    {
-      category: "AI & Automation",
-      description: "",
-      skills: ["n8n Automation", "LangChain", "RAG", "Python", "LLM Integration", "Evolution API", "Docker", "Docker Compose", "local LLMs"]
-    }
-  ];
+ const stacks = [
+  {
+    category: "Frontend",
+    description: "",
+    skills: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack Query",
+      "shadcn/ui",
+      "Framer Motion",
+    ],
+  },
+  {
+    category: "Backend & Databases",
+    description: "",
+    skills: [
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "REST APIs",
+      "Docker",
+      "Docker Compose",
+    ],
+  },
+  {
+    category: "AI Engineering",
+    description: "",
+    skills: [
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "LLM Integration",
+      "AI Agents",
+      "Vector Databases",
+      "Local LLMs"
+    ],
+  },
+];
 
   return (
     <section id="tech" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">

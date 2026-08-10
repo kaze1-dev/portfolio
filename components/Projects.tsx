@@ -31,45 +31,81 @@ const Projects = () => {
   }, [activeVideo]);
 
   const projects: Project[] = [
-    {
-      title: "Business AI Customer Support Agent",
-      description: "An automated WhatsApp assistant integrated with WHMCS that handles client support, manages domains and hosting services, checks invoices, and resolves technical tickets in real-time.",
-      tags: ["FastAPI", "LangChain", "WHMCS", "Evolution API", "Docker"],
-      githubLink: "https://github.com/kaze1-dev/tricasol",
-      liveLink: null,
-      videoUrl: "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4",
-      client: true,
-      caseStudyUrl: "/projects/whatsapp-agent" 
-    },
-    {
-      title: "GoRoom — Multi-Hotel Booking Platform",
-      description: "A hotel booking platform built for a client managing 8 properties on a unified system, featuring fast search filters, secure accounts, and online reservations.",
-      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "better-auth", "Tailwind CSS", "TanStack Query"],
-      githubLink: null,
-      liveLink: "https://www.goroom.pk",
-      inProgress: false,
-      client: true,
-      caseStudyUrl: "/projects/goroom" 
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "A full-stack admin panel for online stores to manage inventory, track live sales performance, and analyze store data with interactive charts.",
-      tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "TanStack Query", "NextAuth", "Recharts"],
-      githubLink: "https://github.com/kaze1-dev/Analytics_Dashboard",
-      liveLink: "https://analytics-dashboard-nu-mocha.vercel.app/",
-      inProgress: true
-    },
-    
-    {
-      title: "Pixel Cat — Portfolio AI Assistant",
-      description: "An interactive AI assistant embedded on this site that answers visitor and client questions about my background, projects, and technical skills in real time.",
-      tags: ["Python", "FastAPI", "LangChain", "RAG"],
-      githubLink: "https://github.com/kaze1-dev/pixel",
-      liveLink: null
-    },
-    
-  ];
+  {
+    title: "Business AI Customer Support Agent",
+    description:
+      "An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "LangChain",
+      "WHMCS",
+      "Evolution API",
+      "Docker",
+    ],
+    githubLink: "https://github.com/kaze1-dev/tricasol",
+    liveLink: null,
+    videoUrl:
+      "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4",
+    client: true,
+    caseStudyUrl: "/projects/whatsapp-agent",
+  },
 
+  {
+    title: "GoRoom — Multi-Hotel Booking Platform",
+    description:
+      "A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "better-auth",
+      "TanStack Query",
+      "Tailwind CSS",
+    ],
+    githubLink: null,
+    liveLink: "https://www.goroom.pk",
+    inProgress: false,
+    client: true,
+    caseStudyUrl: "/projects/goroom",
+  },
+
+  {
+    title: "Analytics Dashboard",
+    description:
+      "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "TanStack Query",
+      "Recharts",
+    ],
+    githubLink:
+      "https://github.com/kaze1-dev/Analytics_Dashboard",
+    liveLink:
+      "https://analytics-dashboard-nu-mocha.vercel.app/",
+    inProgress: true,
+  },
+
+  {
+    title: "Pixel Cat — Portfolio AI Assistant",
+    description:
+      "An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.",
+    tags: [
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "RAG",
+      "Vector Database",
+    ],
+    githubLink: "https://github.com/kaze1-dev/pixel",
+    liveLink: null,
+  },
+];
   const miniProjects: Project[] = [
     {
       title: "Hotel Haven Lahore",
