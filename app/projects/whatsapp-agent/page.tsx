@@ -1,9 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
 import {
   LuArrowLeft,
+  LuX,
 } from 'react-icons/lu';
+import { HiExternalLink } from 'react-icons/hi';
+import Vid_Player from '@/components/vid_player';
+import VideoDemo from './videoDemo';
 
 export const metadata = {
   title: 'WhatsApp AI Support Agent Case Study | Faisal Abbas',
@@ -12,6 +15,7 @@ export const metadata = {
 };
 
 export default function WhatsAppAgentCaseStudy() {
+
   const techStack = [
     { name: 'FastAPI', role: 'Backend' },
     { name: 'LangChain & LangGraph', role: 'AI agent & workflow' },
@@ -46,7 +50,6 @@ export default function WhatsAppAgentCaseStudy() {
 
       <div className="max-w-4xl mx-auto relative z-10">
 
-        {/* Back */}
         <Link
           href="/#projects"
           className="inline-flex items-center gap-2 text-sm font-mono text-zinc-500 hover:text-violet-400 transition-colors mb-10 group"
@@ -58,7 +61,6 @@ export default function WhatsAppAgentCaseStudy() {
           Back to Projects
         </Link>
 
-        {/* Hero */}
         <div className="mb-12 border-b border-violet-950/40 pb-10">
 
           <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -78,7 +80,6 @@ export default function WhatsAppAgentCaseStudy() {
             services, handle invoices, and work with support tickets.
           </p>
 
-          {/* GitHub */}
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="https://github.com/kaze1-dev/tricasol"
@@ -89,10 +90,10 @@ export default function WhatsAppAgentCaseStudy() {
               <BsGithub size={18} />
               View Repository
             </a>
+            <VideoDemo />
           </div>
         </div>
 
-        {/* Highlights */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
           {[
             {
@@ -129,7 +130,6 @@ export default function WhatsAppAgentCaseStudy() {
           ))}
         </div>
 
-        {/* Problem & Solution */}
         <section className="mb-14 space-y-8">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
@@ -138,8 +138,6 @@ export default function WhatsAppAgentCaseStudy() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-
-            {/* Problem */}
             <div className="bg-black/20 border border-violet-950/30 p-6 rounded-2xl">
 
               <h3 className="text-lg font-semibold text-rose-400 mb-3">
@@ -156,7 +154,6 @@ export default function WhatsAppAgentCaseStudy() {
 
             </div>
 
-            {/* Solution */}
             <div className="bg-black/20 border border-violet-950/30 p-6 rounded-2xl">
 
               <h3 className="text-lg font-semibold text-emerald-400 mb-3">
@@ -175,7 +172,6 @@ export default function WhatsAppAgentCaseStudy() {
           </div>
         </section>
 
-        {/* How It Works */}
         <section className="mb-14 space-y-6">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
@@ -265,8 +261,6 @@ export default function WhatsAppAgentCaseStudy() {
           </div>
 
         </section>
-
-        {/* Technical Challenges */}
         <section className="mb-14 space-y-6">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
@@ -275,8 +269,6 @@ export default function WhatsAppAgentCaseStudy() {
           </h2>
 
           <div className="space-y-4">
-
-            {/* Memory */}
             <div className="bg-black/20 border border-violet-950/30 p-6 rounded-2xl">
 
               <h3 className="text-base font-bold text-white mb-2">
@@ -296,8 +288,6 @@ export default function WhatsAppAgentCaseStudy() {
               </p>
 
             </div>
-
-            {/* Approval */}
             <div className="bg-black/20 border border-violet-950/30 p-6 rounded-2xl">
 
               <h3 className="text-base font-bold text-white mb-2">
@@ -316,8 +306,6 @@ export default function WhatsAppAgentCaseStudy() {
               </p>
 
             </div>
-
-            {/* Speed */}
             <div className="bg-black/20 border border-violet-950/30 p-6 rounded-2xl">
 
               <h3 className="text-base font-bold text-white mb-2">
@@ -334,20 +322,16 @@ export default function WhatsAppAgentCaseStudy() {
 
           </div>
         </section>
-
-        {/* Tools */}
         <section className="mb-14 space-y-6">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
             AI Tools
             <span className="text-violet-500">.</span>
           </h2>
-
           <p className="text-sm text-zinc-400">
             I built custom tools that allow the AI agent to interact with the
             company's systems.
           </p>
-
           <div className="flex flex-wrap gap-2">
 
             {toolsList.map((tool, idx) => (
@@ -362,15 +346,12 @@ export default function WhatsAppAgentCaseStudy() {
           </div>
 
         </section>
-
-        {/* Tech Stack */}
         <section className="mb-14 space-y-6">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
             Tech Stack
             <span className="text-violet-500">.</span>
           </h2>
-
           <div className="bg-black/20 border border-violet-950/30 rounded-2xl overflow-hidden">
 
             <div className="divide-y divide-violet-950/30">
@@ -396,7 +377,6 @@ export default function WhatsAppAgentCaseStudy() {
 
         </section>
 
-        {/* My Role */}
         <section className="mb-14 space-y-6">
 
           <h2 className="text-2xl font-bold text-white tracking-tight">
@@ -415,8 +395,6 @@ export default function WhatsAppAgentCaseStudy() {
           </div>
 
         </section>
-
-        {/* Footer */}
         <div className="border-t border-violet-950/40 pt-8 flex items-center justify-between">
 
           <Link
@@ -426,9 +404,7 @@ export default function WhatsAppAgentCaseStudy() {
             <LuArrowLeft size={16} />
             Return to all projects
           </Link>
-
         </div>
-
       </div>
     </main>
   );

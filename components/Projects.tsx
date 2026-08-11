@@ -47,7 +47,7 @@ const Projects = () => {
     githubLink: "https://github.com/kaze1-dev/tricasol",
     liveLink: null,
     videoUrl:
-      "https://res.cloudinary.com/oriqovwt/video/upload/v1783369789/0706_1_x2ek1f.mp4",
+      "https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4",
     client: true,
     caseStudyUrl: "/projects/whatsapp-agent",
   },
