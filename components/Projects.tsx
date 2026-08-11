@@ -129,7 +129,6 @@ const Projects = () => {
     <div
       className={`bg-black/20 border border-violet-950/30 ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'} rounded-2xl transition-all duration-300 hover:border-violet-500/40 hover:bg-black/40 group flex flex-col justify-between hover:-translate-y-1 relative`}
     >
-      {/* Invisible overlay link for card clickability */}
       {project.caseStudyUrl && (
         <Link
           href={project.caseStudyUrl}
