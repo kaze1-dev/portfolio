@@ -9,7 +9,7 @@ const Header = () => {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <div className="flex items-center space-x-8">
           <div className="cursor-pointer select-none text-lg font-bold tracking-wide text-white transition hover:text-zinc-300">
-            Faisal Abbas
+            Faisal Kaze
           </div>
 
           <nav className="hidden items-center space-x-4 md:flex">

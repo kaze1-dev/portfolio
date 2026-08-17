@@ -183,7 +183,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <div className="flex flex-col items-center gap-2 text-center text-sm sm:flex-row sm:gap-6 sm:text-left">
             <div className="select-none font-bold tracking-wide text-white">
-              Faisal Abbas<span className="text-zinc-300">.</span>
+              Faisal Kaze<span className="text-zinc-300">.</span>
             </div>
             <span className="hidden text-zinc-700 sm:inline">|</span>
             <p className="text-xs text-zinc-600">&copy; 2026 All rights reserved.</p>
