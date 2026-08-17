@@ -14,7 +14,7 @@ export default function VideoDemo() {
     <>
       <button
         onClick={() => setActiveVideo(videoUrl)}
-        className="inline-flex items-center gap-2 bg-neutral-900 border border-violet-950/60 hover:border-violet-500/40 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5"
+        className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white transition-all hover:-translate-y-0.5 hover:border-zinc-500"
       >
         <HiExternalLink size={18} />
         Video Demo

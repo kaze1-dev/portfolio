@@ -2,12 +2,16 @@ interface PixelCatProps {
   className?: string;
 }
 
-export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-82 sm:h-82' }) => {
+export const PixelCat: React.FC<PixelCatProps> = ({
+  className = 'w-64 h-64 sm:w-82 sm:h-82',
+}) => {
   return (
-    <div className={`relative flex items-center justify-center p-8 rounded-2xl ${className}`}>
+    <div
+      className={`relative flex items-center justify-center rounded-2xl p-8 ${className}`}
+    >
       <svg
         viewBox="0 0 32 32"
-        className="w-full h-full fill-current text-[#9d7bf6]"
+        className="h-full w-full fill-current text-zinc-200"
         shapeRendering="crispEdges"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -26,17 +30,52 @@ export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-
         <rect x="21" y="10" width="3" height="3" />
         <rect x="22" y="9" width="2" height="1" />
         <rect x="22" y="8" width="1" height="1" />
-        <rect x="15" y="10" width="1" height="2" className="text-black fill-current" />
-        <rect x="22" y="11" width="1" height="2" className="text-black fill-current" />
-        <rect x="16" y="17" width="1" height="2" className="text-[#593da3] fill-current" />
-        <rect x="22" y="17" width="1" height="2" className="text-[#593da3] fill-current" />
+
+        <rect
+          x="15"
+          y="10"
+          width="1"
+          height="2"
+          className="fill-current text-black"
+        />
+        <rect
+          x="22"
+          y="11"
+          width="1"
+          height="2"
+          className="fill-current text-black"
+        />
+
+        <rect
+          x="16"
+          y="17"
+          width="1"
+          height="2"
+          className="fill-current text-zinc-700"
+        />
+        <rect
+          x="22"
+          y="17"
+          width="1"
+          height="2"
+          className="fill-current text-zinc-700"
+        />
+
         <rect x="9" y="5" width="1" height="3" />
         <rect x="8" y="6" width="3" height="1" />
         <rect x="6" y="8" width="1" height="1" />
         <rect x="23" y="3" width="1" height="3" />
         <rect x="22" y="4" width="3" height="1" />
         <rect x="26" y="5" width="2" height="2" />
-        <rect x="27" y="6" width="1" height="1" className="text-black fill-current" />
+
+        <rect
+          x="27"
+          y="6"
+          width="1"
+          height="1"
+          className="fill-current text-black"
+        />
+
         <rect x="9" y="21" width="1" height="4" />
         <rect x="8" y="22" width="4" height="1" />
         <rect x="7" y="23" width="1" height="1" />
@@ -45,7 +84,14 @@ export const PixelCat: React.FC<PixelCatProps> = ({ className = 'w-64 h-64 sm:w-
         <rect x="26" y="22" width="1" height="3" />
         <rect x="25" y="23" width="3" height="1" />
         <rect x="23" y="25" width="3" height="3" />
-        <rect x="24" y="26" width="1" height="1" className="text-black fill-current" />
+
+        <rect
+          x="24"
+          y="26"
+          width="1"
+          height="1"
+          className="fill-current text-black"
+        />
       </svg>
     </div>
   );

@@ -1,133 +1,135 @@
-"use client"
-import React, { useState, useEffect } from 'react'
+"use client";
+
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
-import { LuExternalLink, LuFolder, LuPlay, LuX, LuArrowRight } from 'react-icons/lu'
+import {
+  LuArrowRight,
+  LuExternalLink,
+  LuFolder,
+  LuPlay,
+  LuX,
+} from 'react-icons/lu';
 
 type Project = {
-  title: string
-  description: string
-  tags: string[]
-  githubLink: string | null
-  liveLink: string | null
-  videoUrl?: string | null
-  inProgress?: boolean
-  client?: boolean
-  caseStudyUrl?: string | null
-}
+  title: string;
+  description: string;
+  tags: string[];
+  githubLink: string | null;
+  liveLink: string | null;
+  videoUrl?: string | null;
+  inProgress?: boolean;
+  client?: boolean;
+  caseStudyUrl?: string | null;
+};
 
 const Projects = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   useEffect(() => {
-    if (activeVideo) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = activeVideo ? 'hidden' : 'unset';
+
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [activeVideo]);
 
   const projects: Project[] = [
-  {
-    title: "Business AI Customer Support Agent",
-    description:
-      "An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "LangGraph",
-      "LangChain",
-      "WHMCS",
-      "Evolution API",
-      "Docker",
-    ],
-    githubLink: "https://github.com/kaze1-dev/tricasol",
-    liveLink: null,
-    videoUrl:
-      "https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4",
-    client: true,
-    caseStudyUrl: "/projects/whatsapp-agent",
-  },
-
-  {
-    title: "GoRoom — Multi-Hotel Booking Platform",
-    description:
-      "A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Prisma",
-      "better-auth",
-      "TanStack Query",
-      "Tailwind CSS",
-    ],
-    githubLink: null,
-    liveLink: "https://www.goroom.pk",
-    inProgress: false,
-    client: true,
-    caseStudyUrl: "/projects/goroom",
-  },
-
-  {
-    title: "Analytics Dashboard",
-    description:
-      "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Prisma",
-      "TanStack Query",
-      "Recharts",
-    ],
-    githubLink:
-      "https://github.com/kaze1-dev/Analytics_Dashboard",
-    liveLink:
-      "https://analytics-dashboard-nu-mocha.vercel.app/",
-    inProgress: true,
-  },
-
-  {
-    title: "Pixel Cat — Portfolio AI Assistant",
-    description:
-      "An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.",
-    tags: [
-      "Python",
-      "FastAPI",
-      "LangChain",
-      "RAG",
-      "Vector Database",
-    ],
-    githubLink: "https://github.com/kaze1-dev/pixel",
-    liveLink: null,
-  },
-];
-  const miniProjects: Project[] = [
     {
-      title: "Hotel Haven Lahore",
-      description: "A responsive promotional website built for a hotel in Lahore.",
-      tags: ["Next.js", "Tailwind CSS"],
-      githubLink: null,
-      liveLink: "https://haven-hotel-lahore.vercel.app/",
-      client: true
+      title: 'Business AI Customer Support Agent',
+      description:
+        'An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.',
+      tags: [
+        'Python',
+        'FastAPI',
+        'LangGraph',
+        'LangChain',
+        'WHMCS',
+        'Evolution API',
+        'Docker',
+      ],
+      githubLink: 'https://github.com/kaze1-dev/tricasol',
+      liveLink: null,
+      videoUrl:
+        'https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4',
+      client: true,
+      caseStudyUrl: '/projects/whatsapp-agent',
     },
     {
-      title: "Go Guest House Lahore",
-      description: "A clean landing page and showcase site for a local guest house.",
-      tags: ["Next.js", "Tailwind CSS"],
+      title: 'GoRoom — Multi-Hotel Booking Platform',
+      description:
+        'A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.',
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'PostgreSQL',
+        'Prisma',
+        'better-auth',
+        'TanStack Query',
+        'Tailwind CSS',
+      ],
       githubLink: null,
-      liveLink: "https://guest-house-roan.vercel.app/",
-      client: true
-    }
+      liveLink: 'https://www.goroom.pk',
+      inProgress: false,
+      client: true,
+      caseStudyUrl: '/projects/goroom',
+    },
+    {
+      title: 'Analytics Dashboard',
+      description:
+        'A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.',
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'PostgreSQL',
+        'Prisma',
+        'TanStack Query',
+        'Recharts',
+      ],
+      githubLink: 'https://github.com/kaze1-dev/Analytics_Dashboard',
+      liveLink: 'https://analytics-dashboard-nu-mocha.vercel.app/',
+      inProgress: true,
+    },
+    {
+      title: 'Pixel Cat — Portfolio AI Assistant',
+      description:
+        'An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.',
+      tags: ['Python', 'FastAPI', 'LangChain', 'RAG', 'Vector Database'],
+      githubLink: 'https://github.com/kaze1-dev/pixel',
+      liveLink: null,
+    },
   ];
 
-  const ProjectCard = ({ project, compact }: { project: Project; compact: boolean }) => (
+  const miniProjects: Project[] = [
+    {
+      title: 'Hotel Haven Lahore',
+      description: 'A responsive promotional website built for a hotel in Lahore.',
+      tags: ['Next.js', 'Tailwind CSS'],
+      githubLink: null,
+      liveLink: 'https://haven-hotel-lahore.vercel.app/',
+      client: true,
+    },
+    {
+      title: 'Go Guest House Lahore',
+      description: 'A clean landing page and showcase site for a local guest house.',
+      tags: ['Next.js', 'Tailwind CSS'],
+      githubLink: null,
+      liveLink: 'https://guest-house-roan.vercel.app/',
+      client: true,
+    },
+  ];
+
+  const ProjectCard = ({
+    project,
+    compact,
+  }: {
+    project: Project;
+    compact: boolean;
+  }) => (
     <div
-      className={`bg-black/20 border border-violet-950/30 ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'} rounded-2xl transition-all duration-300 hover:border-violet-500/40 hover:bg-black/40 group flex flex-col justify-between hover:-translate-y-1 relative`}
+      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${
+        compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'
+      }`}
     >
       {project.caseStudyUrl && (
         <Link
@@ -138,8 +140,8 @@ const Projects = () => {
       )}
 
       <div>
-        <div className="flex items-center justify-between mb-6 relative z-10">
-          <div className="text-violet-400 group-hover:text-violet-300 transition-colors duration-300">
+        <div className="relative z-10 mb-6 flex items-center justify-between">
+          <div className="text-zinc-300 transition-colors duration-300 group-hover:text-white">
             <LuFolder size={compact ? 24 : 28} strokeWidth={1.5} />
           </div>
 
@@ -147,48 +149,52 @@ const Projects = () => {
             {project.caseStudyUrl && (
               <Link
                 href={project.caseStudyUrl}
-                className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded bg-violet-500/10 border border-violet-500/30 text-violet-300 select-none mr-1 flex items-center gap-1 group-hover:border-violet-400 transition-colors"
+                className="mr-1 flex items-center gap-1 rounded border border-zinc-700 bg-white/5 px-2.5 py-1 text-[10px] font-mono font-semibold text-zinc-300 transition-colors group-hover:border-zinc-500 group-hover:text-white"
                 aria-label={`View ${project.title} case study`}
               >
                 Case Study <LuArrowRight size={10} />
               </Link>
             )}
+
             {project.inProgress && (
-              <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 select-none mr-1">
+              <span className="mr-1 select-none rounded-full border border-zinc-700 bg-white/5 px-2 py-0.5 text-[10px] font-mono font-semibold text-zinc-300">
                 In Progress
               </span>
             )}
+
             {project.videoUrl && (
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setActiveVideo(project.videoUrl!);
                 }}
-                className="hover:text-violet-400 hover:border-violet-500/40 transition-all duration-200 flex items-center gap-1.5 text-[11px] font-mono font-semibold bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded-md text-violet-300 mr-1 shadow-sm shadow-violet-950/20 relative z-10"
+                className="relative z-10 mr-1 flex items-center gap-1.5 rounded-md border border-zinc-700 bg-white/5 px-2.5 py-1 text-[11px] font-mono font-semibold text-zinc-300 shadow-sm transition-all duration-200 hover:border-zinc-500 hover:text-white"
                 aria-label="Watch Demo Video"
               >
-                <LuPlay size={12} className="fill-violet-400/20" /> DEMO
+                <LuPlay size={12} className="fill-zinc-300/20" /> DEMO
               </button>
             )}
+
             {project.githubLink && (
               <a
                 href={project.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="hover:text-violet-400 transition-colors duration-200 relative z-10"
+                className="relative z-10 transition-colors duration-200 hover:text-white"
                 aria-label="GitHub Repository"
               >
                 <BsGithub size={compact ? 18 : 20} />
               </a>
             )}
+
             {project.liveLink && (
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="hover:text-violet-400 transition-colors duration-200 relative z-10"
+                className="relative z-10 transition-colors duration-200 hover:text-white"
                 aria-label="Live Website"
               >
                 <LuExternalLink size={compact ? 18 : 20} />
@@ -197,20 +203,24 @@ const Projects = () => {
           </div>
         </div>
 
-        <h3 className={`${compact ? 'text-lg' : 'text-xl'} font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300`}>
+        <h3
+          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${
+            compact ? 'text-lg' : 'text-xl'
+          }`}
+        >
           {project.title}
         </h3>
 
-        <p className="text-sm text-zinc-500 mb-6 leading-relaxed">
+        <p className="mb-6 text-sm leading-relaxed text-zinc-500">
           {project.description}
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-2 mt-auto relative z-10">
+      <div className="relative z-10 mt-auto flex flex-wrap gap-2">
         {project.tags.map((tag, tIdx) => (
           <span
             key={tIdx}
-            className="text-[11px] font-mono font-medium px-2.5 py-1 rounded bg-[#13111F]/80 border border-violet-950/40 text-violet-300/80 group-hover:border-violet-500/10 transition-colors duration-300 select-none"
+            className="select-none rounded border border-zinc-800 bg-zinc-900/80 px-2.5 py-1 text-[11px] font-mono font-medium text-zinc-300 transition-colors duration-300 group-hover:border-zinc-700 group-hover:text-white"
           >
             {tag}
           </span>
@@ -220,35 +230,40 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
-      <div className="absolute top-1/4 left-0 w-100 h-100 bg-violet-600/5 rounded-full blur-[150px] pointer-events-none" />
+    <section
+      id="projects"
+      className="relative overflow-hidden border-zinc-800 bg-zinc-950 px-4 py-20 text-zinc-400 sm:py-28"
+    >
+      <div className="pointer-events-none absolute left-0 top-1/4 h-100 w-100 rounded-full bg-white/5 blur-[150px]" />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-            Featured Projects<span className="text-violet-500">.</span>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Featured Projects<span className="text-zinc-300">.</span>
           </h2>
-          <p className="text-base text-zinc-500 max-w-xl leading-relaxed">
-            Real-world projects I've built, ranging from full-stack web apps to custom AI systems.
+          <p className="max-w-xl text-base leading-relaxed text-zinc-500">
+            Real-world projects I've built, ranging from full-stack web apps to
+            custom AI systems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} compact={false} />
           ))}
         </div>
 
         <div className="mt-20">
-          <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
-            Mini Projects<span className="text-violet-500">.</span>
+          <h3 className="mb-3 text-xl font-bold tracking-tight text-white sm:text-2xl">
+            Mini Projects<span className="text-zinc-300">.</span>
           </h3>
-          <p className="text-sm text-zinc-500 max-w-xl leading-relaxed mb-8">
+          <p className="mb-8 max-w-xl text-sm leading-relaxed text-zinc-500">
             Smaller client builds and custom frontend websites.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
             {miniProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} compact={true} />
+              <ProjectCard key={index} project={project} compact />
             ))}
           </div>
         </div>
@@ -256,39 +271,41 @@ const Projects = () => {
 
       {activeVideo && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300 animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-md transition-opacity duration-300 animate-fade-in"
           onClick={() => setActiveVideo(null)}
         >
           <div
-            className="relative w-full max-w-4xl bg-[#0E1117] border border-violet-900/40 rounded-2xl overflow-hidden shadow-2xl shadow-violet-950/50"
+            className="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl shadow-black/50"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-4 py-3 bg-black/40 border-b border-violet-950/40">
-              <span className="text-xs font-mono font-medium text-violet-400 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="flex items-center justify-between border-b border-zinc-800 bg-black/40 px-4 py-3">
+              <span className="flex items-center gap-2 text-xs font-mono font-medium text-zinc-300">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-white" />
                 System Demo Playback
               </span>
+
               <button
                 onClick={() => setActiveVideo(null)}
-                className="text-zinc-400 hover:text-white transition-colors p-1 rounded-lg hover:bg-white/5"
+                className="rounded-lg p-1 text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
                 aria-label="Close modal"
               >
                 <LuX size={20} />
               </button>
             </div>
-            <div className="aspect-video bg-black flex items-center justify-center">
+
+            <div className="flex aspect-video items-center justify-center bg-black">
               <video
                 src={activeVideo}
                 controls
                 autoPlay
-                className="w-full h-full object-contain"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
         </div>
       )}
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

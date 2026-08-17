@@ -1,25 +1,28 @@
-"use client"
+"use client";
+
 import React from 'react';
 import { PixelCat } from './pixel_cat';
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#090D16] text-zinc-400 py-20 sm:py-18 px-4 border-t border-violet-950/20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center">
-
+    <section
+      id="about"
+      className=" border-zinc-800 bg-zinc-950 px-4 py-20 text-zinc-400 sm:py-18"
+    >
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-8">
         <div className="flex flex-col justify-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-6 flex items-center gap-2">
-            About Me<span className="text-violet-500">.</span>
+          <h2 className="mb-6 flex items-center gap-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            About Me<span className="text-zinc-300">.</span>
           </h2>
 
           <div className="space-y-5 text-base leading-relaxed">
             <p>
-              I'm a{" "}
-              <span className="text-violet-400 font-medium">
+              I'm a{' '}
+              <span className="font-medium text-zinc-200">
                 Full-Stack AI Engineer
-              </span>{" "}
-              pursuing a BS in Computer Science and working at{" "}
-              <span className="text-white font-medium">Tricasol</span>. I build
+              </span>{' '}
+              pursuing a BS in Computer Science and working at{' '}
+              <span className="font-medium text-white">Tricasol</span>. I build
               full-stack web applications, backend systems, and AI-powered tools
               that solve real problems.
             </p>
@@ -34,30 +37,29 @@ const About = () => {
           </div>
         </div>
 
-        <div className='flex items-center justify-center md:justify-end w-full'>
-          <div className='relative group'>
-
+        <div className="flex w-full items-center justify-center md:justify-end">
+          <div className="group relative">
             <PixelCat />
 
-            <div className='absolute bottom-[68%] left-[10%] sm:left-[15%] bg-neutral-900/90 backdrop-blur-md border border-violet-500/30 rounded-xl px-4 py-2 text-center shadow-2xl animate-bubble-float
-              after:content-[""] 
-              after:absolute 
-              after:top-full 
-              after:left-[65%] 
-              after:border-[6px] 
-              after:border-transparent 
-              after:border-t-neutral-900/90'>
-              <h4 className='text-violet-400 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap select-none'>
+            <div
+              className='absolute bottom-[68%] left-[10%] rounded-xl border border-zinc-700 bg-neutral-900/90 px-4 py-2 text-center shadow-2xl backdrop-blur-md animate-bubble-float sm:left-[15%]
+                after:absolute
+                after:left-[65%]
+                after:top-full
+                after:border-[6px]
+                after:border-transparent
+                after:border-t-neutral-900/90
+                after:content-[""]'
+            >
+              <h4 className="select-none whitespace-nowrap text-xs font-semibold tracking-wide text-zinc-200 sm:text-sm">
                 Hey there! 🐾
               </h4>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default About;

@@ -1,85 +1,91 @@
-import React from 'react'
+import React from 'react';
 
 const TechStack = () => {
- const stacks = [
-  {
-    category: "Frontend",
-    description: "",
-    skills: [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "TanStack Query",
-      "shadcn/ui",
-      "Framer Motion",
-    ],
-  },
-  {
-    category: "Backend & Databases",
-    description: "",
-    skills: [
-      "Python",
-      "FastAPI",
-      "Node.js",
-      "PostgreSQL",
-      "Prisma ORM",
-      "REST APIs",
-      "Docker",
-      "Docker Compose",
-    ],
-  },
-  {
-    category: "AI Engineering",
-    description: "",
-    skills: [
-      "Python",
-      "LangChain",
-      "LangGraph",
-      "RAG",
-      "LLM Integration",
-      "AI Agents",
-      "Vector Databases",
-      "Local LLMs"
-    ],
-  },
-];
+  const stacks = [
+    {
+      category: 'Frontend',
+      description: '',
+      skills: [
+        'Next.js',
+        'React.js',
+        'TypeScript',
+        'Tailwind CSS',
+        'TanStack Query',
+        'shadcn/ui',
+        'Framer Motion',
+      ],
+    },
+    {
+      category: 'Backend & Databases',
+      description: '',
+      skills: [
+        'Python',
+        'FastAPI',
+        'Node.js',
+        'PostgreSQL',
+        'Prisma ORM',
+        'REST APIs',
+        'Docker',
+        'Docker Compose',
+      ],
+    },
+    {
+      category: 'AI Engineering',
+      description: '',
+      skills: [
+        'Python',
+        'LangChain',
+        'LangGraph',
+        'RAG',
+        'LLM Integration',
+        'AI Agents',
+        'Vector Databases',
+        'Local LLMs',
+      ],
+    },
+  ];
 
   return (
-    <section id="tech" className="bg-[#090D16] text-zinc-400 py-20 sm:py-28 px-4 border-t border-violet-950/20 relative overflow-hidden">
+    <section
+      id="tech"
+      className="relative overflow-hidden border-zinc-800 bg-zinc-950 px-4 py-20 text-zinc-400 sm:py-28"
+    >
+      <div className="pointer-events-none absolute bottom-0 right-0 h-75 w-75 rounded-full bg-white/5 blur-[120px]" />
 
-      <div className="absolute bottom-0 right-0 w-75 h-75 bg-violet-500/5 rounded-full blur-[120px] pointer-events-none" />
-
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-            Tech Stack<span className="text-violet-500">.</span>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Tech Stack<span className="text-zinc-300">.</span>
           </h2>
-          <p className="text-base text-zinc-500 max-w-xl leading-relaxed">
+
+          <p className="max-w-xl text-base leading-relaxed text-zinc-500">
             Tools, frameworks, and technologies I use to bring ideas to life.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {stacks.map((stack, idx) => (
             <div
               key={idx}
-              className="bg-black/20 p-6 sm:p-8 rounded-2xl transition-all group relative flex flex-col justify-between hover:bg-black/40"
+              className="group relative flex flex-col justify-between rounded-2xl bg-black/20 p-6 transition-all hover:bg-black/40 sm:p-8"
             >
-              <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent transition-all duration-500 rounded-t-2xl" />
+              <div className="absolute left-0 top-0 h-px w-full rounded-t-2xl bg-linear-to-r from-transparent transition-all duration-500" />
 
               <div>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
+                <h3 className="mb-3 text-lg font-bold text-white transition-colors duration-300 group-hover:text-zinc-200">
                   {stack.category}
                 </h3>
-                <p className="text-sm text-zinc-500 mb-4 leading-relaxed">
+
+                <p className="mb-4 text-sm leading-relaxed text-zinc-500">
                   {stack.description}
                 </p>
               </div>
+
               <div className="flex flex-wrap gap-2">
                 {stack.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="text-xs font-medium px-3 py-1.5 rounded-lg bg-[#13111F]/60 border border-violet-950/30 text-violet-300/90 group-hover:border-violet-500/20 group-hover:text-violet-200 transition-all duration-300 select-none"
+                    className="select-none rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 transition-all duration-300 group-hover:border-zinc-700 group-hover:text-white"
                   >
                     {skill}
                   </span>
@@ -88,10 +94,9 @@ const TechStack = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default TechStack;
