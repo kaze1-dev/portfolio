@@ -123,7 +123,7 @@ export default function ChatWidget() {
               <span className="mt-0.5 flex items-center gap-1">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white" />
                 <span className="truncate text-[9px] font-medium text-neutral-400">
-                  RAG Interface Active
+                   Active
                 </span>
               </span>
             </div>

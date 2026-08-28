@@ -117,7 +117,26 @@ const Projects = () => {
     },
   ];
 
-  const miniProjects: Project[] = [
+  const clientProjects: Project[] = [
+    {
+      title: 'GoRoom — Multi-Hotel Booking Platform',
+      description:
+        'A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.',
+      tags: [
+        'Next.js',
+        'TypeScript',
+        'PostgreSQL',
+        'Prisma',
+        'better-auth',
+        'TanStack Query',
+        'Tailwind CSS',
+      ],
+      githubLink: null,
+      liveLink: 'https://www.goroom.pk',
+      inProgress: false,
+      client: true,
+      caseStudyUrl: '/projects/goroom',
+    },
     {
       title: 'Hotel Haven Lahore',
       description: 'A responsive promotional website built for a hotel in Lahore.',
@@ -273,11 +292,11 @@ const Projects = () => {
             Client Work<span className="text-zinc-300"></span>
           </h3>
           <p className="mb-8 max-w-xl text-sm leading-relaxed text-zinc-500">
-            Smaller client builds and custom frontend websites.
+            Client projects and production websites built for real businesses and their customers.
           </p>
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {miniProjects.map((project, index) => (
+            {clientProjects.map((project, index) => (
               <ProjectCard key={index} project={project} compact />
             ))}
           </div>
