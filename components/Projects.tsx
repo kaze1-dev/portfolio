@@ -36,7 +36,7 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: 'Business AI Customer Support Agent',
+      title: 'AI Customer Support Agent',
       description:
         'An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.',
       tags: [
@@ -73,6 +73,23 @@ const Projects = () => {
       inProgress: false,
       client: true,
       caseStudyUrl: '/projects/goroom',
+    },
+    {
+      title: 'Research Agent',
+      description:
+        'An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search the web and generate research reports.',
+      tags: [
+        'Python',
+        'FastAPI',
+        'LangGraph',
+        'LangChain',
+        'MCP',
+        'Web Search',
+        'Next.js',
+      ],
+      githubLink: 'https://github.com/kaze1-dev/research-agent',
+      liveLink: null,
+      inProgress: true,
     },
     {
       title: 'Analytics Dashboard',
@@ -127,9 +144,8 @@ const Projects = () => {
     compact: boolean;
   }) => (
     <div
-      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${
-        compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'
-      }`}
+      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'
+        }`}
     >
       {project.caseStudyUrl && (
         <Link
@@ -204,9 +220,8 @@ const Projects = () => {
         </div>
 
         <h3
-          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${
-            compact ? 'text-lg' : 'text-xl'
-          }`}
+          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${compact ? 'text-lg' : 'text-xl'
+            }`}
         >
           {project.title}
         </h3>
@@ -239,10 +254,10 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-14">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Featured Projects<span className="text-zinc-300">.</span>
+            Featured Projects<span className="text-zinc-300"></span>
           </h2>
           <p className="max-w-xl text-base leading-relaxed text-zinc-500">
-            Real-world projects I've built, ranging from full-stack web apps to
+            Real-world/Personal projects I've built, ranging from full-stack web apps to
             custom AI systems.
           </p>
         </div>
@@ -255,7 +270,7 @@ const Projects = () => {
 
         <div className="mt-20">
           <h3 className="mb-3 text-xl font-bold tracking-tight text-white sm:text-2xl">
-            Mini Projects<span className="text-zinc-300">.</span>
+            Client Work<span className="text-zinc-300"></span>
           </h3>
           <p className="mb-8 max-w-xl text-sm leading-relaxed text-zinc-500">
             Smaller client builds and custom frontend websites.

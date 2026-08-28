@@ -12,7 +12,7 @@ const About = () => {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-8">
         <div className="flex flex-col justify-center">
           <h2 className="mb-6 flex items-center gap-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            About Me<span className="text-zinc-300">.</span>
+            About Me<span className="text-zinc-300"></span>
           </h2>
 
           <div className="space-y-5 text-base leading-relaxed">

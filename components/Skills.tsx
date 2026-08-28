@@ -1,49 +1,50 @@
 import React from 'react';
 
 const TechStack = () => {
-  const stacks = [
-    {
-      category: 'Frontend',
-      description: '',
-      skills: [
-        'Next.js',
-        'React.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'TanStack Query',
-        'shadcn/ui',
-        'Framer Motion',
-      ],
-    },
-    {
-      category: 'Backend & Databases',
-      description: '',
-      skills: [
-        'Python',
-        'FastAPI',
-        'Node.js',
-        'PostgreSQL',
-        'Prisma ORM',
-        'REST APIs',
-        'Docker',
-        'Docker Compose',
-      ],
-    },
-    {
-      category: 'AI Engineering',
-      description: '',
-      skills: [
-        'Python',
-        'LangChain',
-        'LangGraph',
-        'RAG',
-        'LLM Integration',
-        'AI Agents',
-        'Vector Databases',
-        'Local LLMs',
-      ],
-    },
-  ];
+ const stacks = [
+  {
+    category: 'Frontend',
+    description: '',
+    skills: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'TanStack Query',
+      'shadcn/ui',
+      'Framer Motion',
+    ],
+  },
+  {
+    category: 'Backend & Databases',
+    description: '',
+    skills: [
+      'Python',
+      'TypeScript',
+      'FastAPI',
+      'Node.js',
+      'PostgreSQL',
+      'Prisma',
+      "Sqlalchemy",
+      'Docker',
+      'Docker Compose',
+    ],
+  },
+  {
+    category: 'AI Engineering',
+    description: '',
+    skills: [
+      'Python',
+      'LangChain',
+      'LangGraph',
+      'RAG',
+      'LLM Integration',
+      'AI Agents',
+      'MCP',
+      'Vector Databases',
+    ],
+  },
+];
 
   return (
     <section
@@ -55,7 +56,7 @@ const TechStack = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-14">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Tech Stack<span className="text-zinc-300">.</span>
+            Tech Stack<span className="text-zinc-300"></span>
           </h2>
 
           <p className="max-w-xl text-base leading-relaxed text-zinc-500">
