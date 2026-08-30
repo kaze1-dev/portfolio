@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { BsGithub } from 'react-icons/bs';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
 import {
   LuArrowRight,
   LuExternalLink,
   LuFolder,
   LuPlay,
   LuX,
-} from 'react-icons/lu';
+} from "react-icons/lu";
 
 type Project = {
   title: string;
@@ -19,7 +19,6 @@ type Project = {
   liveLink: string | null;
   videoUrl?: string | null;
   inProgress?: boolean;
-  client?: boolean;
   caseStudyUrl?: string | null;
 };
 
@@ -27,131 +26,90 @@ const Projects = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   useEffect(() => {
-    document.body.style.overflow = activeVideo ? 'hidden' : 'unset';
+    document.body.style.overflow = activeVideo ? "hidden" : "unset";
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [activeVideo]);
 
   const projects: Project[] = [
     {
-      title: 'AI Customer Support Agent',
+      title: "AI Customer Support Agent",
       description:
-        'An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.',
+        "An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.",
       tags: [
-        'Python',
-        'FastAPI',
-        'LangGraph',
-        'LangChain',
-        'WHMCS',
-        'Evolution API',
-        'Docker',
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "WHMCS",
+        "Evolution API",
+        "Docker",
       ],
-      githubLink: 'https://github.com/kaze1-dev/tricasol',
+      githubLink: "https://github.com/kaze1-dev/tricasol",
       liveLink: null,
       videoUrl:
-        'https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4',
-      client: true,
-      caseStudyUrl: '/projects/whatsapp-agent',
+        "https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4",
+      caseStudyUrl: "/projects/whatsapp-agent",
     },
     {
-      title: 'GoRoom — Multi-Hotel Booking Platform',
+      title: "GoRoom — Multi-Hotel Booking Platform",
       description:
-        'A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.',
+        "A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.",
       tags: [
-        'Next.js',
-        'TypeScript',
-        'PostgreSQL',
-        'Prisma',
-        'better-auth',
-        'TanStack Query',
-        'Tailwind CSS',
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "better-auth",
+        "TanStack Query",
+        "Tailwind CSS",
       ],
       githubLink: null,
-      liveLink: 'https://www.goroom.pk',
-      inProgress: false,
-      client: true,
-      caseStudyUrl: '/projects/goroom',
+      liveLink: "https://www.goroom.pk",
+      caseStudyUrl: "/projects/goroom",
     },
     {
-      title: 'Research Agent',
+      title: "Research Agent",
       description:
-        'An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search the web and generate research reports.',
+        "An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search the web and generate research reports.",
       tags: [
-        'Python',
-        'FastAPI',
-        'LangGraph',
-        'LangChain',
-        'MCP',
-        'Web Search',
-        'Next.js',
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "MCP",
+        "Web Search",
+        "Next.js",
       ],
-      githubLink: 'https://github.com/kaze1-dev/research-agent',
+      githubLink: "https://github.com/kaze1-dev/research-agent",
       liveLink: null,
       inProgress: true,
     },
     {
-      title: 'Analytics Dashboard',
+      title: "Analytics Dashboard",
       description:
-        'A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.',
+        "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
       tags: [
-        'Next.js',
-        'TypeScript',
-        'PostgreSQL',
-        'Prisma',
-        'TanStack Query',
-        'Recharts',
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "TanStack Query",
+        "Recharts",
       ],
-      githubLink: 'https://github.com/kaze1-dev/Analytics_Dashboard',
-      liveLink: 'https://analytics-dashboard-nu-mocha.vercel.app/',
+      githubLink: "https://github.com/kaze1-dev/Analytics_Dashboard",
+      liveLink: "https://analytics-dashboard-nu-mocha.vercel.app/",
       inProgress: true,
     },
     {
-      title: 'Pixel Cat — Portfolio AI Assistant',
+      title: "Pixel Cat — Portfolio AI Assistant",
       description:
-        'An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.',
-      tags: ['Python', 'FastAPI', 'LangChain', 'RAG', 'Vector Database'],
-      githubLink: 'https://github.com/kaze1-dev/pixel',
+        "An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.",
+      tags: ["Python", "FastAPI", "LangChain", "RAG", "Vector Database"],
+      githubLink: "https://github.com/kaze1-dev/pixel",
       liveLink: null,
-    },
-  ];
-
-  const clientProjects: Project[] = [
-    {
-      title: 'GoRoom — Multi-Hotel Booking Platform',
-      description:
-        'A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.',
-      tags: [
-        'Next.js',
-        'TypeScript',
-        'PostgreSQL',
-        'Prisma',
-        'better-auth',
-        'TanStack Query',
-        'Tailwind CSS',
-      ],
-      githubLink: null,
-      liveLink: 'https://www.goroom.pk',
-      inProgress: false,
-      client: true,
-      caseStudyUrl: '/projects/goroom',
-    },
-    {
-      title: 'Hotel Haven Lahore',
-      description: 'A responsive promotional website built for a hotel in Lahore.',
-      tags: ['Next.js', 'Tailwind CSS'],
-      githubLink: null,
-      liveLink: 'https://haven-hotel-lahore.vercel.app/',
-      client: true,
-    },
-    {
-      title: 'Go Guest House Lahore',
-      description: 'A clean landing page and showcase site for a local guest house.',
-      tags: ['Next.js', 'Tailwind CSS'],
-      githubLink: null,
-      liveLink: 'https://guest-house-roan.vercel.app/',
-      client: true,
     },
   ];
 
@@ -163,8 +121,9 @@ const Projects = () => {
     compact: boolean;
   }) => (
     <div
-      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${compact ? 'p-5 sm:p-6' : 'p-6 sm:p-7'
-        }`}
+      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${
+        compact ? "p-5 sm:p-6" : "p-6 sm:p-7"
+      }`}
     >
       {project.caseStudyUrl && (
         <Link
@@ -180,14 +139,15 @@ const Projects = () => {
             <LuFolder size={compact ? 24 : 28} strokeWidth={1.5} />
           </div>
 
-          <div className="flex items-center space-x-3 gap-2 text-zinc-500">
+          <div className="flex items-center gap-2 space-x-3 text-zinc-500">
             {project.caseStudyUrl && (
               <Link
                 href={project.caseStudyUrl}
                 className="mr-1 flex items-center gap-1 rounded border border-zinc-700 bg-white/5 px-2.5 py-1 text-[10px] font-mono font-semibold text-zinc-300 transition-colors group-hover:border-zinc-500 group-hover:text-white"
                 aria-label={`View ${project.title} case study`}
               >
-                Case Study <LuArrowRight size={10} />
+                Case Study
+                <LuArrowRight size={10} />
               </Link>
             )}
 
@@ -206,7 +166,8 @@ const Projects = () => {
                 className="relative z-10 mr-1 flex items-center gap-1.5 rounded-md border border-zinc-700 bg-white/5 px-2.5 py-1 text-[11px] font-mono font-semibold text-zinc-300 shadow-sm transition-all duration-200 hover:border-zinc-500 hover:text-white"
                 aria-label="Watch Demo Video"
               >
-                <LuPlay size={12} className="fill-zinc-300/20" /> DEMO
+                <LuPlay size={12} className="fill-zinc-300/20" />
+                DEMO
               </button>
             )}
 
@@ -239,8 +200,9 @@ const Projects = () => {
         </div>
 
         <h3
-          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${compact ? 'text-lg' : 'text-xl'
-            }`}
+          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${
+            compact ? "text-lg" : "text-xl"
+          }`}
         >
           {project.title}
         </h3>
@@ -273,11 +235,12 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         <div className="mb-14">
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Featured Projects<span className="text-zinc-300"></span>
+            Featured Projects<span className="text-zinc-300">.</span>
           </h2>
+
           <p className="max-w-xl text-base leading-relaxed text-zinc-500">
-            Real-world/Personal projects I've built, ranging from full-stack web apps to
-            custom AI systems.
+            A selection of production systems and personal projects I&apos;ve
+            built.
           </p>
         </div>
 
@@ -285,21 +248,6 @@ const Projects = () => {
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} compact={false} />
           ))}
-        </div>
-
-        <div className="mt-20">
-          <h3 className="mb-3 text-xl font-bold tracking-tight text-white sm:text-2xl">
-            Client Work<span className="text-zinc-300"></span>
-          </h3>
-          <p className="mb-8 max-w-xl text-sm leading-relaxed text-zinc-500">
-            Client projects and production websites built for real businesses and their customers.
-          </p>
-
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {clientProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} compact />
-            ))}
-          </div>
         </div>
       </div>
 
