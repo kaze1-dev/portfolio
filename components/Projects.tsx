@@ -35,7 +35,40 @@ const Projects = () => {
 
   const projects: Project[] = [
     {
-      title: "AI Customer Support Agent",
+      title: "InsightAI — AI-Powered Business Analytics Platform",
+      description:
+        "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "TanStack Query",
+        "Recharts",
+      ],
+      githubLink: "https://github.com/kaze1-dev/Analytics_Dashboard",
+      liveLink: "https://analytics-dashboard-nu-mocha.vercel.app/",
+      inProgress: true,
+    },
+    {
+      title: "ScoutAI — Autonomous Web Research Agent",
+      description:
+        "An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search and generate research reports.",
+      tags: [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "MCP",
+        "Web Search",
+        "Next.js",
+      ],
+      githubLink: "https://github.com/kaze1-dev/research-agent",
+      liveLink: null,
+      inProgress: true,
+    },
+    {
+      title: "AI Customer Support Assistant",
       description:
         "An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.",
       tags: [
@@ -70,39 +103,8 @@ const Projects = () => {
       liveLink: "https://www.goroom.pk",
       caseStudyUrl: "/projects/goroom",
     },
-    {
-      title: "Research Agent",
-      description:
-        "An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search the web and generate research reports.",
-      tags: [
-        "Python",
-        "FastAPI",
-        "LangGraph",
-        "LangChain",
-        "MCP",
-        "Web Search",
-        "Next.js",
-      ],
-      githubLink: "https://github.com/kaze1-dev/research-agent",
-      liveLink: null,
-      inProgress: true,
-    },
-    {
-      title: "Analytics Dashboard",
-      description:
-        "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
-      tags: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "TanStack Query",
-        "Recharts",
-      ],
-      githubLink: "https://github.com/kaze1-dev/Analytics_Dashboard",
-      liveLink: "https://analytics-dashboard-nu-mocha.vercel.app/",
-      inProgress: true,
-    },
+
+
     {
       title: "Pixel Cat — Portfolio AI Assistant",
       description:
@@ -121,9 +123,8 @@ const Projects = () => {
     compact: boolean;
   }) => (
     <div
-      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${
-        compact ? "p-5 sm:p-6" : "p-6 sm:p-7"
-      }`}
+      className={`group relative flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-600 hover:bg-black/40 ${compact ? "p-5 sm:p-6" : "p-6 sm:p-7"
+        }`}
     >
       {project.caseStudyUrl && (
         <Link
@@ -200,9 +201,8 @@ const Projects = () => {
         </div>
 
         <h3
-          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${
-            compact ? "text-lg" : "text-xl"
-          }`}
+          className={`mb-3 font-bold text-white transition-colors duration-300 group-hover:text-zinc-200 ${compact ? "text-lg" : "text-xl"
+            }`}
         >
           {project.title}
         </h3>
