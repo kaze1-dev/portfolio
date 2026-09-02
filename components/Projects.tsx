@@ -37,7 +37,7 @@ const Projects = () => {
     {
       title: "InsightAI — AI-Powered Business Analytics Platform",
       description:
-        "A full-stack dashboard for online stores to manage products, track sales, and view store data using charts and reports.",
+        "An AI-powered analytics platform that helps businesses understand sales, customers, orders, and products through interactive dashboards and intelligent insights.",
       tags: [
         "Next.js",
         "TypeScript",
