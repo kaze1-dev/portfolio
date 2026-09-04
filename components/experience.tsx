@@ -27,6 +27,7 @@ const Experience = () => {
       period: "Jun 2026 — Aug 2026",
       description:
         "Built AI-powered backend systems and LLM-driven workflows for real-world business applications. Developed a WhatsApp customer support agent for hosting, domain, invoice, and support queries, integrating LLM workflows with WHMCS. Built backend services using Python and FastAPI and worked with LangChain, LangGraph, LLM APIs, and Docker.",
+      link: "https://tricasol.com"
     },
   ];
 
