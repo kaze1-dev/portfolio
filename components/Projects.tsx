@@ -37,7 +37,7 @@ const Projects = () => {
     {
       title: "InsightAI — AI-Powered Business Analytics Platform",
       description:
-        "An AI-powered analytics platform that helps businesses understand sales, customers, orders, and products through interactive dashboards and intelligent insights.",
+        "An AI-powered business analytics platform that turns sales, customer, order, and product data into interactive dashboards and AI-generated insights for faster decision-making.",
       tags: [
         "Next.js",
         "TypeScript",
@@ -55,27 +55,30 @@ const Projects = () => {
       liveLink: "https://analytics-dashboard-nu-mocha.vercel.app/",
       inProgress: true,
     },
+
     {
       title: "ScoutAI — Autonomous Web Research Agent",
       description:
-        "An AI-powered research agent that uses LangGraph for orchestration and MCP tools to search and generate research reports.",
+        "An autonomous research agent that decomposes complex questions, researches the web through MCP tools, synthesizes evidence, and streams its execution in real time.",
       tags: [
         "Python",
         "FastAPI",
         "LangGraph",
         "LangChain",
         "MCP",
-        "Web Search",
+        "SSE",
         "Next.js",
       ],
       githubLink: "https://github.com/kaze1-dev/research-agent",
       liveLink: null,
       inProgress: true,
+      caseStudyUrl: "/projects/scoutai",
     },
+
     {
       title: "AI Customer Support Assistant",
       description:
-        "An AI assistant for WhatsApp that helps customers with hosting, domains, invoices, and support tickets. It connects to WHMCS and can perform many tasks automatically.",
+        "A WhatsApp AI support agent that connects directly to WHMCS to automate hosting, domain, invoice, and support workflows—turning customer conversations into actionable operations.",
       tags: [
         "Python",
         "FastAPI",
@@ -91,10 +94,11 @@ const Projects = () => {
         "https://res.cloudinary.com/oriqovwt/video/upload/v1786431414/customer-support-agent_otqh4v.mp4",
       caseStudyUrl: "/projects/whatsapp-agent",
     },
+
     {
       title: "GoRoom — Multi-Hotel Booking Platform",
       description:
-        "A hotel booking platform used across 9 hotels. Guests can search for rooms, check availability, and make bookings online. It also has a private dashboard for hotel managers.",
+        "A multi-hotel booking platform powering online reservations across 9 hotels, with room availability and a private manager dashboard for bookings, revenue, and occupancy.",
       tags: [
         "Next.js",
         "TypeScript",
@@ -107,16 +111,6 @@ const Projects = () => {
       githubLink: null,
       liveLink: "https://www.goroom.pk",
       caseStudyUrl: "/projects/goroom",
-    },
-
-
-    {
-      title: "Pixel Cat — Portfolio AI Assistant",
-      description:
-        "An AI assistant on my portfolio that answers questions about me, my projects, and my technical skills.",
-      tags: ["Python", "FastAPI", "LangChain", "RAG", "Vector Database"],
-      githubLink: "https://github.com/kaze1-dev/pixel",
-      liveLink: null,
     },
   ];
 

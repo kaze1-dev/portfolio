@@ -10,8 +10,8 @@ const Hero = () => {
         </h1>
 
         <p className="mb-10 max-w-xl text-base leading-relaxed tracking-wide text-zinc-400">
-          Full-Stack & AI Engineer building web applications, backend systems, and
-          AI-powered tools with Next.js, Python, FastAPI, and LLMs.
+          AI Engineer building AI-powered web applications, backend systems, and
+           tools with Python, Next.js, FastAPI, and LLMs.
         </p>
 
         <a
