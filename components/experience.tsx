@@ -18,7 +18,7 @@ const Experience = () => {
       role: "Open Source Contributor",
       period: "Aug 2026 — Present",
       description:
-        "Contributing to an open-source project by building features, improving existing functionality, and working with modern software engineering practices.",
+        "Contributing to an open-source software project by implementing features, improving existing functionality, and working within an established codebase. Applying modern software engineering practices through Git-based workflows and issue-driven development.",
       link: "https://github.com/ForkMesh",
     },
     {
@@ -26,7 +26,7 @@ const Experience = () => {
       role: "AI Engineer Intern",
       period: "Jun 2026 — Aug 2026",
       description:
-        "Built AI-powered systems and backend services, including a WhatsApp customer support agent integrating LLM workflows with business systems.",
+        "Built AI-powered backend systems and LLM-driven workflows for real-world business applications. Developed a WhatsApp customer support agent for hosting, domain, invoice, and support queries, integrating LLM workflows with WHMCS. Built backend services using Python and FastAPI and worked with LangChain, LangGraph, LLM APIs, and Docker.",
     },
   ];
 
@@ -89,9 +89,9 @@ const Experience = () => {
                       </p>
                     </div>
 
-                    <span className="w-fit rounded-full border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs font-mono text-zinc-500">
+                  {/*   <span className="w-fit rounded-full border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs font-mono text-zinc-500">
                       {experience.period}
-                    </span>
+                    </span> */}
                   </div>
 
                   <p className="max-w-3xl text-sm leading-relaxed text-zinc-500">

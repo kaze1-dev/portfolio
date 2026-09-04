@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <Projects />
-      <About />
       <Experience />
+      <About />
       <TechStack />
     </>
   );
