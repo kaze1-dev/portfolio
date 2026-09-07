@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import React from 'react';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { HiMail } from 'react-icons/hi';
+import Link from "next/link";
+import React from "react";
+import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import { HiMail } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -19,12 +19,14 @@ const Header = () => {
             >
               Home
             </Link>
+
             <Link
               href="/#projects"
               className="rounded-lg text-sm font-black text-zinc-400 transition-all duration-200 hover:text-white"
             >
               Projects
             </Link>
+
             <Link
               href="/#about"
               className="rounded-lg text-sm font-black text-zinc-400 transition-all duration-200 hover:text-white"
@@ -42,6 +44,17 @@ const Header = () => {
           >
             <HiMail size={20} />
           </a>
+
+          <a
+            href="https://wa.me/923316855008"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg p-2 text-zinc-400 transition-all duration-200 hover:text-white"
+            aria-label="WhatsApp"
+          >
+            <BsWhatsapp size={20} />
+          </a>
+
           <a
             href="https://github.com/kaze1-dev"
             target="_blank"
@@ -51,6 +64,7 @@ const Header = () => {
           >
             <BsGithub size={20} />
           </a>
+
           <a
             href="https://www.linkedin.com/in/faisal-abbas-codes"
             target="_blank"

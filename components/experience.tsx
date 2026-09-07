@@ -14,20 +14,36 @@ type Experience = {
 const Experience = () => {
   const experiences: Experience[] = [
     {
-      company: "ForkMesh",
-      role: "Open Source Contributor",
+      company: "GoRoom",
+      role: "Freelance Full Stack Engineer",
       period: "Aug 2026 — Present",
       description:
-        "Contributing to an open-source software project by implementing features, improving existing functionality, and working within an established codebase. Applying modern software engineering practices through Git-based workflows and issue-driven development.",
+        "Hired by GoRoom to design and build an internal CRM from the ground up. Developing business-critical features and backend services to streamline hotel operations and internal workflows.",
+      link: "https://www.goroom.pk",
+    },
+    {
+      company: "ForkMesh",
+      role: "Open Source Contributor",
+      period: "Jul 2026 — Aug 2026",
+      description:
+        "Contributed to an open-source software project by implementing features, improving existing functionality, and working within an established codebase. Applied modern software engineering practices through Git-based workflows and issue-driven development.",
       link: "https://github.com/ForkMesh",
+    },
+    {
+      company: "GoRoom",
+      role: "Full Stack Engineer",
+      period: "Apr 2026 — Jun 2026",
+      description:
+        "Built and engineered the GoRoom multi-hotel booking platform from scratch as the sole engineer behind the product. Designed and implemented the full-stack architecture, hotel search, authentication, booking workflows, database layer, and responsive user experience using Next.js, TypeScript, PostgreSQL, and Prisma.",
+      link: "https://www.goroom.pk",
     },
     {
       company: "Tricasol",
       role: "AI Engineer Intern",
-      period: "Jun 2026 — Aug 2026",
+      period: "Jan 2026 — Mar 2026",
       description:
         "Built AI-powered backend systems and LLM-driven workflows for real-world business applications. Developed a WhatsApp customer support agent for hosting, domain, invoice, and support queries, integrating LLM workflows with WHMCS. Built backend services using Python and FastAPI and worked with LangChain, LangGraph, LLM APIs, and Docker.",
-      link: "https://tricasol.com"
+      link: "https://tricasol.com",
     },
   ];
 
@@ -90,9 +106,9 @@ const Experience = () => {
                       </p>
                     </div>
 
-                  {/*   <span className="w-fit rounded-full border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs font-mono text-zinc-500">
+                    <span className="w-fit rounded-full border border-zinc-800 bg-zinc-900/80 px-3 py-1 text-xs font-mono text-zinc-500">
                       {experience.period}
-                    </span> */}
+                    </span>
                   </div>
 
                   <p className="max-w-3xl text-sm leading-relaxed text-zinc-500">

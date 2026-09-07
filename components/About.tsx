@@ -21,17 +21,17 @@ const About = () => {
               <span className="font-medium text-zinc-200">
                 Full-Stack &amp; AI Engineer
               </span>{" "}
-              and Computer Science student focused on building web
-              applications, backend systems, and AI-powered software.
+              focused on building production-ready web applications, backend
+              systems, and AI-powered software.
             </p>
 
             <p>
               I work across the stack with{" "}
               <span className="font-medium text-zinc-200">
-                Next.js, TypeScript, Python, FastAPI, PostgreSQL
-              </span>{" "}
-              and modern AI technologies. I&apos;ve built everything from
-              full-stack platforms and booking systems to{" "}
+                Next.js, TypeScript, Python, FastAPI, and PostgreSQL
+              </span>
+              . I&apos;ve built everything from full-stack platforms and
+              booking systems to{" "}
               <span className="font-medium text-zinc-200">
                 LLM-powered applications, RAG systems, and agentic workflows
               </span>
@@ -40,12 +40,14 @@ const About = () => {
 
             <p>
               I&apos;m particularly interested in the engineering behind AI
-              systems — how models, tools, APIs, data, and application
-              architecture come together to build software that is actually
-              useful. I&apos;m currently contributing to{" "}
-              <span className="font-medium text-white">ForkMesh</span> and
-              continuing to explore AI engineering and system design through
-              independent projects.
+              systems — bringing models, tools, APIs, data, and application
+              architecture together to build software that is actually useful.
+              I enjoy taking ideas from{" "}
+              <span className="font-medium text-white">
+                concept to a working product
+              </span>
+              , with a strong focus on clean architecture, scalability, and
+              real-world use cases.
             </p>
 
             <p className="text-zinc-500">
